@@ -1,5 +1,7 @@
 require 'bundler'
 Bundler.require
+require_relative 'models/message-previewer.rb'
+require_relative 'models/message-sender.rb'
 
 class ApplicationController < Sinatra::Base
 
@@ -7,13 +9,14 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
-  get '/preview' do
-    erb :index # Brian's updated test
+  post '/message-previewer' do
+    @bday = params[:birthday]
+    erb :preview
   end
-
 	
-	post '/generate_message' do
-		erb :generated # Dammy's test
+  post '/message-sender' do
+    send_message(params[:message])
+    erb :confirmation
 	end
 
 end
