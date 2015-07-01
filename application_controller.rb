@@ -8,12 +8,9 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/preview' do
-    erb :index # Brian's test
+    erb :index # Brian's updated test
   end
 
-	get '/preview' do
-    erb :index # Brian's test
-  end
 	
 	post '/generate_message' do
 		erb :generated # Dammy's test
