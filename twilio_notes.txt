@@ -1,0 +1,15 @@
+Twilio
+
+We will be integrating twilio-ruby gem. Can find it on github
+
+Created a file called message-sender.rb.
+	=> require 
+	=> Copy the relevant parts of the setup part to message-sender.rb file
+
+Signup for Twilio to get API credentials and enter creds into message-sender.rb
+
+Create a send_message method on message-sender.rb by looking at "Send an SMS" section 
+in the 
+
+owner creates git repo on local
+owner creates repo on GitHub
