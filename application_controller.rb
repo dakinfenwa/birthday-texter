@@ -10,7 +10,10 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/message-previewer' do
-    @bday = params[:birthday]
+    @to_name = params[:to_name]
+    @to_bday = params[:to_bday]
+    @to_phone = params[:to_phone]
+    @from_name = params[:from_name]
     erb :preview
   end
 	
