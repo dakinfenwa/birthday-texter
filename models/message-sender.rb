@@ -1,6 +1,8 @@
 # require 'twilio-ruby'
 
-def send_message(message)
+def send_message(message, to_phone)
+  to_phone = ("+1" + to_phone.to_s)
+  
   account_sid = 'AC57d30f6f3e6ef74916066b9cd7bac481'
   auth_token = '226214696c13297f828dfa269879c6d8'
 
@@ -9,7 +11,7 @@ def send_message(message)
 
   @client.messages.create(
     from: '+16467591817',
-    to: '+17209512343',
+    to: to_phone,
     body: message
   )
 end

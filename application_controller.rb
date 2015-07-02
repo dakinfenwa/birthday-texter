@@ -14,11 +14,14 @@ class ApplicationController < Sinatra::Base
     @to_bday = params[:to_bday]
     @to_phone = params[:to_phone]
     @from_name = params[:from_name]
+    @message = message_previewer(@to_name, @to_bday, @from_name)
     erb :preview
   end
 	
   post '/message-sender' do
-    send_message(params[:message])
+    @message = params[:message]
+    @to_phone = params[:to_phone]
+    send_message(@message, @to_phone)
     erb :confirmation
 	end
 

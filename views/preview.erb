@@ -7,8 +7,8 @@
 	<h2>Recipient Phone Number:</h2>
 	<h3><%= @to_phone %></h3>
 	<form method="POST" action="/message-sender">
-		<input name="message" value=@message hidden=yes>
-		<input name="to_phone" value=@to_phone hidden=yes>
+		<input name="message" value="<%= @message %>" hidden=yes>
+		<input name="to_phone" value=<%= @to_phone %> hidden=yes>
 		<input type=submit value="Yes, send message!">
 	</form>
 </body>
