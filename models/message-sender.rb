@@ -11,7 +11,7 @@ def send_message(message, to_phone)
 
   @client.messages.create(
     from: '+16467591817',
-    to: to_phone,
+    to: '+17209512343', #to_phone
     body: message
   )
 end
