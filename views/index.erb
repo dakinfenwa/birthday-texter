@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-<!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
-<!-- Latest compiled and minified JavaScript -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
-  </head>
-  <body>
-    <div class="row">
-      <div class="container">
-        <h2>Birthday Texter<h2>
-          <p>Send a birthday greeting<p>        
-       
-          <form method="POST" action="/message-previewer">
-            <p>Enter a few things...</p>
-            <p> What's your name </p>
-            <input type="text" name="from_name" placeholder="Enter your name">
-            <p> What's your friend's name </p>
-            <input type="text" name="to_name" placeholder="Enter your friend's name">
-            <p> What's your friend's birthday </p>
-            <input type="date" name="to_bday" placeholder="Friends Birthday">
-            <p> Your friend's phone number?</p>
-            <input type="text" name="to_phone"  placeholder="Friends Phonenumber">
-            <input type="submit" value="Preview">
+    <head>
+        <title>Birthday Texter</title>
 
-          </form>
-          </div></div>
-        </body>
-      </html>
+        <!--  Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <!-- simple theme -->
+        <link class="theme2" href="/css/simple/assets/css/font-awesome.min.css" rel="stylesheet" title="simple">
+        <link class="theme2" href="/css/simple/assets/css/main.css" rel="stylesheet" title="simple">
+        <link class="theme2" href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' title="simple">
+        <link class="theme2" href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css' title="simple">
+<!--         <link class="mainstyle" href="/css/style.css" rel="stylesheet" type='text/css' title="mainstyle"> -->
+   </head>
+    <body>
+        <div class="container">
+            <div class="row col-md-12">
+              <div class="wrapper">
+                <h1>Birthday Texter<h1>
+                <h2>Send an awesome personalized Birthday greeting and include interesting facts on that date<h2>
+                <form method="POST" action="/message-previewer">
+                  <h3>Answer just a few questions and you will get to preview the message that will be texted to your friend.</h3>
+                    <div class="form-group col-md-12">
+                        <p class="col-md-4"> What's your name </p>
+                        <input type="text" class="form-control col-md-8" name="from_name" placeholder="Enter your name">
+                    </div> 
+                  <div class="form-group col-md-12">
+
+                    <p> What's your friend's name </p>
+                    <input type="text"  class="form-control" name="to_name" placeholder="Enter your friend's name">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <p> What's your friend's birthday </p>
+                    <input type="date" class="form-control" name="to_bday" placeholder="Friends Birthday">
+                  </div>
+                  <div class="form-group col-md-12">
+
+                    <p> Your friend's phone number?</p>
+                    <input type="text" class="form-control" name="to_phone"  placeholder="BETA Sends to Mueller" value="BETA Sends to Mueller" disabled>
+
+                  </div>
+                    <input type="submit" class="btn btn-primary" value="Preview">
+                </form>
+                  </div>
+            </div>
+        </div>
+        <!-- scripts jquery and bootstrap at the bottom for speed -->
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--BACKSTRETCH-->
+        <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+        <script type="text/javascript" src="/css/simple/assets/js/jquery.backstretch.min.js"></script>
+        <script>
+                    $.backstretch("/css/simple/assets/img/bg-birthday.jpg", {speed: 900});
+        </script>
+    </body>
+</html>
