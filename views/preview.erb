@@ -1,14 +1,68 @@
-<body>
-	<title>Preview of Your Message</title>
-	<h1> Please confirm that you want to send the below message to the specificed phone number. </h1>
-	<h2>Your Message Is: </h2>
-	<br>
-	<h3><%= @message %></h3>
-	<h2>Recipient Phone Number:</h2>
-	<h3><%= @to_phone %></h3>
-	<form method="POST" action="/message-sender">
-		<input name="message" value="<%= @message %>" hidden=yes>
-		<input name="to_phone" value=<%= @to_phone %> hidden=yes>
-		<input type=submit value="Yes, send message!">
-	</form>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preview of Your Message</title>
+        <!--  Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <!-- simple theme -->
+        <link class="theme2" href="/css/simple/assets/css/font-awesome.min.css" rel="stylesheet" title="simple">
+        <link class="theme2" href="/css/simple/assets/css/main.css" rel="stylesheet" title="simple">
+        <link class="theme2" href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' title="simple">
+        <link class="theme2" href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css' title="simple">
+      <!-- just for the balloons -->
+      <link href='http://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
+
+        <!--         <link class="mainstyle" href="/css/style.css" rel="stylesheet" type='text/css' title="mainstyle"> -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="row col-md-12">
+                <div class="wrapper">
+                  <h1> Are you ready to send your awesome Birthday Text?</h1>
+                    <h2> Please confirm that you want to send the below message to the specificed phone number. </h2>
+                    <h3>Your Message Is: </h3>
+                    <br>
+                    <h4><%= @message %></h4>
+                    <h5>Recipient Phone Number:</h5>
+                    <h5><%= @to_phone %></h5>
+                    <form method="POST" action="/message-sender">
+                        <input name="message" value="<%= @message %>" hidden="yes">
+                        <input name="to_phone" value="<%= @to_phone %>" hidden="yes">
+                        <input class="btn btn-primary" type="submit" value="Yes, send message!">
+                    </form>
+              </div>
+              <!-- surprise Balloon section -->
+                  <div class="row">
+                    <h2 class="centered balloonmsg"> You Are.....</h2>
+                  <div class="col-md-12 yahballoons">
+                        <div class="balloon">
+                          <div><span>☺</span></div>
+                          <div><span>S</span></div>
+                          <div><span>O</span></div>
+                          <div><span>N</span></div>
+                          <div><span>I</span></div>
+                          <div><span>C</span></div>
+                          <div><span>E</span></div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+                  <!-- scripts jquery and bootstrap at the bottom for speed -->
+
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                <!--BACKSTRETCH-->
+                <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+                <script type="text/javascript" src="/css/simple/assets/js/jquery.backstretch.min.js"></script>
+                <script>
+                            $.backstretch("/css/simple/assets/img/bg-birthday.jpg", {speed: 900});
+                            $( document ).ready(function() {
+                                 $('.yahballoons').delay(3000).fadeIn('slow');
+                            });
+
+                </script>  
+          </body>
+        </html>
