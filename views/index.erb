@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
     <head>
         <title>Birthday Texter</title>
 
@@ -55,4 +56,36 @@
                     $.backstretch("/css/simple/assets/img/bg-birthday.jpg", {speed: 900});
         </script>
     </body>
+=======
+  <head>
+    <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  </head>
+  <body>
+    <div class="row">
+      <div class="container">
+        <h2>Birthday Texter</h2>
+          <p>Send a birthday greeting</p>        
+       
+          <form method="POST" action="/message-previewer">
+            <p>Enter a few things...</p>
+            <p> What's your name </p>
+            <input type="text" name="from_name" placeholder="Enter your name">
+            <p> What's your friend's name </p>
+            <input type="text" name="to_name" placeholder="Enter your friend's name">
+            <p> What's your friend's birthday </p>
+            <input type="date" name="to_bday" placeholder="Friends Birthday">
+            <p> Your friend's phone number?</p>
+            <input type="text" name="to_phone"  placeholder="BETA Sends to Mueller" value="BETA Sends to Mueller" disabled>
+            <input type="submit" value="Preview">
+
+          </form>
+      </div>
+    </div>
+  </body>
+>>>>>>> f5c92218c4b76cddb3b20dc6157e3da01f4e4548
 </html>
