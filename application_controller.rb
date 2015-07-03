@@ -14,6 +14,10 @@ class ApplicationController < Sinatra::Base
   #get '/preview' do
   #  erb :preview
   # end
+	
+	get '/confirmation' do
+		erb :confirmation
+	end
   
   
   post '/message-previewer' do
