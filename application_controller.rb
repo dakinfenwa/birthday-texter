@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   
   # uncomment the following only for testing preview.erb styling
   # otherwise this should REMAIN commented
-  # get '/preview' do
+  #get '/preview' do
   #  erb :preview
   # end
   

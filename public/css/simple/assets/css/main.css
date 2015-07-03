@@ -92,9 +92,9 @@ h1 {
 
 /*specific css to birthday texter */
 .wrapper {
-  max-width: 600px;
+  max-width: 680px;
   margin: 0 auto;
-  margin-top: 160px;
+  margin-top: 40px;
   padding: 40px;
   background: white;
   background: rgba(255, 255, 255, 0.85);
@@ -164,7 +164,7 @@ h3 {
   color: rgba(182, 15, 97, 0.9);
 }
 .balloon > div:nth-child(2) {
-  border: 3px solid red;
+/*   border: 3px solid red; */
   background: rgba(242, 112, 45, 0.9);
   left: 120px;
   box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
