@@ -9,6 +9,13 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
+  # uncomment the following only for testing preview.erb styling
+  # otherwise this should REMAIN commented
+  # get '/preview' do
+  #  erb :preview
+  # end
+  
+  
   post '/message-previewer' do
     @to_name = params[:to_name]
     @to_bday = params[:to_bday]
