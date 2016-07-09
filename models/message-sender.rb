@@ -1,4 +1,4 @@
-# require 'twilio-ruby'
+require 'twilio-ruby'
 
 def send_message(message, to_phone)
   to_phone = ("+1" + to_phone.to_s)
@@ -7,11 +7,13 @@ def send_message(message, to_phone)
   auth_token = '226214696c13297f828dfa269879c6d8'
 
   # set up a client to talk to the Twilio REST API
-  @client = Twilio::REST::Client.new account_sid, auth_token
+  @client = Twilio::REST::Client.new('ACed3ed813257f8acedfce46a695216257','cb1dd832eda91ea39319fe6827f1650b')
 
   @client.messages.create(
-    from: '+16467591817',
-    to: '+17209512343', #to_phone
+    from: '+14342605034',
+    to: to_phone,
     body: message
   )
 end
+
+send_message("test",3305208411)
